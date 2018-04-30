@@ -1,10 +1,15 @@
 package com.ebay.exams.examinator.controllers;
 
+import com.ebay.exams.examinator.model.ExamServiceImpl;
+import com.ebay.exams.examinator.services.ExamService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -22,9 +27,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @RunWith(SpringRunner.class)
 @WebMvcTest
+@ContextConfiguration(classes = NeededServicesForControllersConf.class)
 public class ExamControllerTest {
     @Autowired
     MockMvc mockMvc;
+
+    @Autowired
+    ApplicationContext context;
 
     @Test
     public void checkExamContract() throws Exception {

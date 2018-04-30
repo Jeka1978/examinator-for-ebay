@@ -1,8 +1,10 @@
 package com.ebay.exams.examinator.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Delegate;
 
 /**
@@ -10,9 +12,11 @@ import lombok.experimental.Delegate;
  */
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CheckedExam {
     private Integer mark;
     @Delegate
     @JsonIgnore
-    private Exam exam;
+    private Exam exam = new Exam();
 }
