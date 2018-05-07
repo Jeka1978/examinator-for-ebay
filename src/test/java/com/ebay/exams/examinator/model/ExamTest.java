@@ -1,11 +1,10 @@
 package com.ebay.exams.examinator.model;
 
 import com.ebay.exams.examinator.services.ExamService;
+import com.ebay.exams.examinator.services.ExamServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Evgeny Borisov

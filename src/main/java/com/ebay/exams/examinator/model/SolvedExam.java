@@ -21,4 +21,5 @@ public class SolvedExam {
 
     private String student;
 
+
 }
